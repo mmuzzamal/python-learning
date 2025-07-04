@@ -1,4 +1,4 @@
-# 07 – Functions and Modules in Python
+#  Functions and Modules in Python
 
 In this section, you'll learn how to create reusable blocks of code using functions, and how to organize your code using modules.
 
@@ -82,7 +82,112 @@ This lets you pass arguments in any order.
 
 ---
 
-## 6. What is a Module?
+## 6. Methods in Python Data Structures
+
+A **method** is a function that belongs to a specific object in Python. Many objects, such as strings and common data structures (lists, dictionaries, sets, tuples), have their own built-in methods, which you use with dot notation.
+
+> **Note:**  
+> In the following examples, you will see lists, dictionaries, sets, and tuples. These are important Python data structures.  
+> **You will learn about them in detail in [09_data-structures](../09_data-structures/09-data-structures.md).**  
+
+---
+
+### List Methods
+
+Lists are ordered collections of items. Here are some common list methods:
+
+```python
+fruits = ["apple", "banana"]
+fruits.append("orange")      # Adds 'orange' to the end of the list
+fruits.remove("banana")      # Removes 'banana' from the list
+fruits.insert(1, "cherry")   # Inserts 'cherry' at position 1
+fruits.sort()                # Sorts the list in place
+print(fruits)
+```
+
+---
+
+###  String Methods
+
+Strings are sequences of characters. Here are some common string methods:
+
+```python
+message = "hello world"
+print(message.upper())         # Converts to uppercase: 'HELLO WORLD'
+print(message.replace("h", "H"))  # Replaces first 'h' with 'H': 'Hello world'
+print(message.split())         # Splits into a list: ['hello', 'world']
+```
+
+---
+
+###  Dictionary Methods
+
+Dictionaries store key-value pairs. Here are some common dictionary methods:
+
+```python
+person = {"name": "Alice", "age": 30}
+print(person.keys())        # Returns all keys: dict_keys(['name', 'age'])
+print(person.values())      # Returns all values: dict_values(['Alice', 30])
+person.update({"age": 31})  # Updates the 'age' key
+print(person)
+```
+
+---
+
+###  Set Methods
+
+Sets are collections of unique items. Here are some common set methods:
+
+```python
+numbers = {1, 2, 3}
+numbers.add(4)                        # Adds 4 to the set
+numbers.remove(2)                     # Removes 2 from the set
+other = {3, 4, 5}
+print(numbers.union(other))            # Combines sets: {1, 3, 4, 5}
+print(numbers.intersection(other))     # Common items: {3, 4}
+```
+
+---
+
+###  Tuple Methods
+
+Tuples are ordered and immutable collections. They have fewer methods than other types. The most common are:
+
+```python
+coordinates = (10, 20, 10)
+print(coordinates.count(10))   # Counts how many times 10 appears: 2
+print(coordinates.index(20))   # Finds the index of 20: 1
+```
+
+---
+
+### Summary Table
+
+| Data Structure | Methods Available? | Common Methods Used                           |
+|----------------|-------------------|-----------------------------------------------|
+| List           | Yes               | append, remove, insert, sort, pop             |
+| String         | Yes               | upper, lower, replace, split, find            |
+| Dictionary     | Yes               | keys, values, get, update, pop                |
+| Set            | Yes               | add, remove, union, intersection, clear       |
+| Tuple          | Few               | count, index                                  |
+
+- All built-in data structures have methods, but tuples have the fewest because they cannot be changed after creation.
+- The methods you can use depend on the type of object.
+
+You can always check which methods are available for any object by using the `dir()` function:
+
+```python
+print(dir(list))
+print(dir(str))
+print(dir(dict))
+print(dir(set))
+print(dir(tuple))
+```
+
+This will show a list of all methods and attributes for that data structure.
+
+---
+## 7. What is a Module?
 
 A module is a file containing Python code (functions, variables, etc.) that you can use in other programs. Modules help organize code into separate files.
 
@@ -114,7 +219,7 @@ This imports just the `pi` variable from the `math` module.
 
 ---
 
-## 7. Creating and Using Your Own Module
+## 8. Creating and Using Your Own Module
 
 You can create your own module by saving functions in a `.py` file, then importing it.
 
