@@ -1,4 +1,4 @@
-#  Functions and Modules in Python
+# 07. Functions and Modules in Python
 
 In this section, you'll learn how to create reusable blocks of code using functions, and how to organize your code using modules.
 
