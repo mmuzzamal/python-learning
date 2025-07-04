@@ -88,7 +88,7 @@ A **method** is a function that belongs to a specific object in Python. Many obj
 
 > **Note:**  
 > In the following examples, you will see lists, dictionaries, sets, and tuples. These are important Python data structures.  
-> **You will learn about them in detail in [09_data-structures](../09_data-structures/09-data-structures.md).**  
+> **You will learn about them in detail in [09_data-structures](../09-data-structures/09-data-structures.md).**  
 
 ---
 
